@@ -1,0 +1,19 @@
+<div *ngIf='heroe' class="animated fadeIn fast">
+    <h1>{{heroe.nombre | uppercase}} <small> {{heroe.aparicion | date :'yyyy' }} </small> </h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="heroe.img" [alt]="heroe.nombre" width="100%">
+            <br><br>
+            <a class="btn btn-outline-danger btn-block" [routerLink]="['/heroes']"> Regresar</a>
+        </div>
+        <div class="col-md-8">
+            <h3>{{heroe.nombre}}</h3>
+            <hr>
+            <p> {{heroe.bio}}</p>
+            <div>
+                <img src="assets/img/{{heroe.casa | uppercase}}.png" alt="" class="logo-casa" >
+            </div>
+        </div>
+    </div>
+</div>

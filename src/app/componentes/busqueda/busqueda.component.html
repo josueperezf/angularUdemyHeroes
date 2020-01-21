@@ -1,0 +1,11 @@
+<h1>HERORES</h1>
+<hr>
+<p> Hemos encontrado {{heroes.length}} heroes relacionados</p>
+<div class="card-columns animated fadeIn fast"*ngIf='heroes' >
+    <app-heroe-tarjeta [heroes]="heroes" ></app-heroe-tarjeta>    
+</div>
+<div *ngIf='heroes.length === 0' class="noEncontrado">
+    <img src="assets/img/noEncontrado.svg" width="50%" alt=""><br>
+    <span>No hemos podido encontrar ningun heroe relacionado
+        Intente buscar otras palabras clave</span>
+</div>
